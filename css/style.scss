@@ -1,0 +1,626 @@
+@import "mixin.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@include useRem(720px);
+body {
+  font-size: 16px;
+  font-family: "Helvetica", "微软雅黑";
+  color: #999;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.tm-mobile-header {
+  position: fixed;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  .header-content {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
+    overflow: hidden;
+    .category-menu {
+      float: left;
+      a {
+        display: block;
+        height: 45px;
+        width: 25px;
+        margin-left: 18px;
+        background: url("../imgs/category-menu.png") no-repeat 2px 6px;
+        background-size: 282px 31px;
+      }
+    }
+    .mobile-search {
+      float: left;
+      width: 5rem;
+      margin: 6px 18px 0;
+      height: 33px;
+      background-color: #fff;
+      opacity: .9;
+      border-radius: 2px;
+      line-height: 33px;
+      position: relative;
+      .search-input {
+        margin-left: 10px;
+        font-size: 14px;
+        outline: 0;
+        border: 0;
+      }
+      .search-button {
+        position: absolute;
+        top: 1px;
+        right: 10px;
+        width: 20px;
+        height: 30px;
+        cursor: pointer;
+        background: url("../imgs/category-menu.png") no-repeat -82px 2px;
+        background-size: 282px 31px;
+        background-color: #fff;
+        outline: 0;
+        border: 0;
+      }
+    }
+    .my-info {
+      float: right;
+      a {
+        display: block;
+        height: 45px;
+        line-height: 45px;
+        margin-right: 18px;
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+//banner部分
+#banner {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  .swiper-pagination-bullet {
+    margin: 0 1px;
+    width: 7px;
+    height: 7px;
+    border: 1px solid rgba(0, 0, 0, .5);
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+}
+
+//tm_morning
+.tm_mor {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+//10个选项
+.module-con {
+  width: 100%;
+  overflow: hidden;
+  li {
+    float: left;
+    width: 1.44rem;
+    a {
+      display: block;
+      color: #051B28;
+      font-size: 12px;
+      text-align: center;
+      margin: 4px;
+      padding: 4px;
+      img {
+        display: block;
+        width: 0.73rem;
+        height: 0.73rem;
+        margin: 0 auto 5px;
+      }
+    }
+  }
+}
+
+//tm_hot
+.tm_hot {
+  padding: 0.23rem;
+  .left {
+    width: 1.32rem;
+    height: 0.76rem;
+    border-right: 1px solid #e7e7e7;
+    float: left;
+    img {
+      margin: 0 auto;
+      height: 100%;
+      display: block;
+    }
+  }
+  img.voice {
+    width: 0.37rem;
+    height: 0.33rem;
+    float: left;
+    margin-top: 0.23rem;
+    margin-left: 0.25rem;
+  }
+  #right {
+    height: 0.76rem;
+    overflow: hidden;
+    width: 4.9rem;
+    float: left;
+    margin-left: 0.18rem;
+    .swiper-slide {
+      height: 100%;
+      a {
+        color: #000;
+        font-size: 0.2rem;
+        div {
+          height: 0.38rem;
+          line-height: 0.38rem;
+        }
+        .sub-title {
+          color: #ff2f2f;
+        }
+      }
+
+    }
+  }
+}
+
+.bg-cc {
+  background-color: #f0f0f0;
+}
+
+//有间距的滚动
+#scroll {
+  height: 2.26rem;
+  img {
+    height: 100%;
+  }
+}
+
+//hot
+.hot {
+  width: 100%;
+  height: 0.59rem;
+  text-align: center;
+  font-size: 14px;
+  color: #FF2E2E;
+  line-height: 0.59rem;
+  span {
+    display: inline-block;
+    border-bottom: 1px solid;
+    width: 0.7rem;
+    border-color: #F6B7B7;
+    margin-right: 0.2rem;
+    margin-bottom: 0.1rem;
+  }
+  img {
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+  }
+  span.txt {
+    border: 0;
+    width: auto;
+    height: 0.26rem;
+    line-height: 0.26rem;
+    margin: 0;
+  }
+}
+
+//hot_shop
+.hot_shop {
+  width: 100%;
+  overflow: hidden;
+  li {
+    float: left;
+    width: 1.80rem;
+    text-align: center;
+    background-color: #fff;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    .title {
+      margin-top: 0.1rem;
+      color: #2F2F2F;
+      font-size: 13px;
+    }
+    img {
+      margin: 0.25rem;
+      width: 1.40rem;
+      height: 1.40rem;
+    }
+    span.price, span.sale-point {
+      color: #ff2e2e;
+      font-size: 10px;
+      display: inline-block;
+      height: 0.18rem;
+      line-height: 0.18rem;
+      margin-bottom: 0.25rem;
+    }
+    span.sale-point {
+      color: #9b9b9b;
+      text-decoration: line-through;
+    }
+  }
+  li:last-child {
+    border-right: 0;
+  }
+}
+
+//品牌特卖
+.pinpai {
+  color: #FF8000;
+  span {
+    border-color: #FFCC99;
+  }
+}
+
+.pinpai_con {
+  width: 100%;
+  overflow: hidden;
+  a {
+    float: left;
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  a:first-child {
+    border-right: 1px solid #f0f0f0;
+    box-sizing: border-box;
+  }
+}
+
+//品牌资讯
+.pinpaizixun {
+  color: #009F8A;
+  span {
+    border-color: #B4E1DC;
+  }
+}
+
+.pinpaizixun_con {
+  overflow: hidden;
+  a {
+    width: 33.33%;
+    float: left;
+    img {
+      width: 100%;
+    }
+  }
+  a.floor2 {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//便捷生活
+.bianjie {
+  color: #43AF00;
+  span {
+    border-color: #BBD79F;
+  }
+}
+
+.bianjie_con {
+  overflow: hidden;
+  background-color: #fff;
+  a {
+    float: left;
+    width: 44.44%;
+    height: auto;
+    box-sizing: border-box;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  a.floor1 {
+    border-right: 1px solid #f0f0f0;
+  }
+  a.floor2 {
+    float: left;
+    width: 55.56%;
+    img {
+      width: 100%;
+      float: left;
+    }
+    border-bottom: 1px solid #f0f0f0;
+  }
+  a:last-child {
+    border-bottom: 0;
+  }
+}
+
+//国际海购
+.guoji {
+  color: #8828DD;
+  span {
+    border-color: #CAB9D9;
+  }
+}
+
+.guoji_con {
+  overflow: hidden;
+  a {
+    width: 33.33%;
+    float: left;
+    height: auto;
+    img {
+      width: 100%;
+      float: left;
+    }
+  }
+}
+
+//精选市场
+.jinxuan {
+  color: #E24AA5;
+  span {
+    border-color: #E8BAD5;
+  }
+}
+
+.jinxuan_con {
+  .floor1 {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
+    a {
+      float: left;
+      width: 25%;
+      border-right: 1px solid #f0f0f0;
+      box-sizing: border-box;
+      img {
+        width: 100%;
+        float: left;
+      }
+    }
+    a:last-child {
+      border-right: 0;
+    }
+  }
+  .floor2 {
+    width: 100%;
+    overflow: hidden;
+    a {
+      width: 50%;
+      float: left;
+      border-right: 1px solid #f0f0f0;
+      box-sizing: border-box;
+      img {
+        width: 100%;
+        float: left;
+      }
+    }
+    a:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+//爱生活
+.love_life {
+  color: #17B7FF;
+  span {
+    border-color: #BEDBEC;
+  }
+}
+
+.love_life_con {
+  width: 100%;
+  overflow: hidden;
+  border: 0;
+  a {
+    width: 25%;
+    float: left;
+    border-right: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    img {
+      width: 100%;
+      float: left;
+    }
+  }
+  a:last-child {
+    border-right: 0;
+  }
+}
+
+//潮流酷玩
+.chaoliu {
+  color: #4A84E2;
+  span {
+    border-color: #BECFEC;
+  }
+}
+
+.chaoliu_con {
+  width: 100%;
+  overflow: hidden;
+  border: 0;
+  a {
+    width: 33.33%;
+    float: left;
+    img {
+      width: 100%;
+      float: left;
+    }
+  }
+}
+
+//热门行业
+.remeng {
+  color: #5E4AE2;
+  span {
+    border-color: #C9D0F7;
+  }
+}
+
+.remeng_con {
+  width: 100%;
+  overflow: hidden;
+  border: 0;
+  .floor1 {
+    background-color: #fff;
+    overflow: hidden;
+    border-bottom:1px solid #f0f0f0;
+    a {
+      width: 50%;
+      float: left;
+      img {
+        width: 100%;
+        float: left;
+      }
+      .left, .right {
+        width: 50%;
+        float: left
+      }
+      .left {
+        text-align: center;
+        .title {
+          font-size: 13px;
+          color: #000;
+          margin-top: 0.15rem;
+        }
+        .sub-title {
+          color: #9B9B9B;
+          font-size: 12px;
+          margin-top: 0.12rem;
+        }
+        .logo-pic {
+          height: 0.72rem;
+          width: 0.72rem;
+          height: 0.72rem;
+          margin: 0.18rem auto 0;
+          img {
+            float: left;
+            width: 100%;
+          }
+        }
+
+      }
+    }
+    a:first-child {
+      border-right: 1px solid #f0f0f0;
+      box-sizing: border-box;
+    }
+
+  }
+  .floor2 {
+    overflow: hidden;
+    a {
+      width: 25%;
+      float: left;
+      border-right: 1px solid #f0f0f0;
+      box-sizing: border-box;
+      text-align:center;
+      background-color: #fff;
+      .title {
+        font-size: 13px;
+        color: #000;
+        margin-top: 0.15rem;
+      }
+      .sub-title {
+        color: #9B9B9B;
+        font-size: 12px;
+        margin-top: 0.12rem;
+      }
+      .img-con{
+        width:1.5rem;
+        height:1.5rem;
+        float:left;
+        margin:0.13rem;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    a:last-child{
+      border:0;
+    }
+  }
+}
+
+//品牌旗舰
+.qijian {
+  color: #2f2f2f;
+  span {
+    border-color: #2f2f2f;
+  }
+}
+.qijian_con{
+  overflow: hidden;
+  .floor1{
+    width:50%;
+    float: left;
+    .top{
+      width:100%;
+      overflow: hidden;
+      a{
+        float:left;
+        width:1.13rem;
+        img{
+          width:100%;
+          float:left;
+        }
+      }
+      a.one{
+        float: left;
+        width:2.3rem;
+        margin-right:1px;
+        margin-left:0.1rem;
+      }
+      a.three{
+        margin-top:1px;
+      }
+    }
+    .bottom{
+      margin-top:0.05rem;
+      width:100%;
+      overflow: hidden;
+      background-color: #fff;
+      .shop-logo-con{
+        width:0.5rem;
+        height:0.5rem;
+        float: left;
+        margin-left:0.1rem;
+        img{
+          width:100%;
+          height:100%;
+        }
+      }
+      .shop-info{
+        width:2.24rem;
+        float:left;
+        margin-left:0.12rem;
+
+        .shop-name{
+          color:#2f2f2f;
+          font-size:12px;
+          height:12px;
+          line-height: 12px;
+          overflow: hidden;
+        }
+        .shop-desc{
+          color:#9b9b9b;
+          font-size:12px;
+        }
+      }
+    }
+  }
+}
