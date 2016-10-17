@@ -187,6 +187,8 @@ a {
 
 .tm_hot {
   padding: 0.23rem;
+  padding-right: 0;
+  box-sizing: border-box;
 }
 
 .tm_hot .left {
@@ -213,7 +215,7 @@ a {
 .tm_hot #right {
   height: 0.76rem;
   overflow: hidden;
-  width: 4.9rem;
+  width: 4.6rem;
   float: left;
   margin-left: 0.18rem;
 }

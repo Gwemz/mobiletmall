@@ -136,6 +136,8 @@ a {
 //tm_hot
 .tm_hot {
   padding: 0.23rem;
+  padding-right:0;
+  box-sizing: border-box;
   .left {
     width: 1.32rem;
     height: 0.76rem;
@@ -157,7 +159,7 @@ a {
   #right {
     height: 0.76rem;
     overflow: hidden;
-    width: 4.9rem;
+    width: 4.6rem;
     float: left;
     margin-left: 0.18rem;
     .swiper-slide {
