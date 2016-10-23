@@ -41,16 +41,24 @@ $(function(){
 
     /*var date=['','一','二','三','四','五','六','日'];
     console.log(date[1]);*/
-    var back=$('.back');
-    back.on('click',function(){
-        $('.page1').css({'display':'none'});
-    })
     //点击目录菜单显示状态栏
     var category_menu=$('.category-menu');
     category_menu.on('click',function(){
-        $('.page1').css({'display':'block'});
+        $('.page1').css({'z-index':'999'});
         $('.page1 .content').addClass('move');
+
     })
+    var back=$('.back');
+    back.on('click',function(){
+        $('.page1 .content').removeClass('move')
+            .delay(1000)
+            .queue(function(){
+                $('.page1').css({'z-index':'-1'}).dequeue();
+            });
+        // 加延迟效果的时候必须得入栈和出栈
+
+    })
+
 
     //选项卡效果
     var tab_nav=$('.tab-nav');
